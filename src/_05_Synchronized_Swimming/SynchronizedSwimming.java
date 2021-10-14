@@ -1,4 +1,4 @@
-package _05_Synchronized_Swimming;
+ package _05_Synchronized_Swimming;
 
 /*
  * Synchronization is a mechanism which ensures that two concurrent processes (threads)
@@ -28,9 +28,11 @@ public class SynchronizedSwimming {
 	 * the swimmingPool object until the swimmer has finished their lap.
 	 */
 	private static void swimLap(Swimmer swimmer) throws InterruptedException {
+		synchronized(swimmingPool) {
 		System.out.println(swimmer.name + " started a lap!");
 		Thread.sleep(2000);
 		System.out.println(swimmer.name + " finished!");
+		}
 	}
 
 	public static void takeTurn(Swimmer swimmer) {

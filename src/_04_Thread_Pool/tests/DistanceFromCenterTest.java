@@ -5,6 +5,8 @@ import javax.swing.JOptionPane;
 
 import org.junit.jupiter.api.Test;
 
+import _04_Thread_Pool.WorkQueue;
+
 class DistanceFromCenterTest {
 
 	public static double distance(double x1, double y1, double x2, double y2) {
@@ -76,7 +78,7 @@ class DistanceFromCenterTest {
 		
 		multiEndTime = System.nanoTime();
 		elapsedTimeMulti = (double) (multiEndTime - startTime) / 1_000_000_000.0;
-		System.out.println("milt-thread time: " + elapsedTimeMulti + " seconds");
+		System.out.println("mult-thread time: " + elapsedTimeMulti + " seconds");
 		assertArrayEquals(pix1, pix2);
 		System.out.println("Arrays are a match");
 		assertTrue(singleEndTime < multiEndTime);

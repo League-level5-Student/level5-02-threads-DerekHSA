@@ -9,9 +9,9 @@ public class ThreadDemo {
 			Robot tammy = new Robot(800, 700);
 			Robot sammy = new Robot(1200, 700);
 			
-			timmy.setSpeed(10);
-			tammy.setSpeed(10);
-			sammy.setSpeed(10);
+			timmy.setSpeed(1);
+			tammy.setSpeed(1);
+			sammy.setSpeed(1);
 			
 			timmy.move(400);
 			tammy.move(400);
